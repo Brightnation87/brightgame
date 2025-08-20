@@ -1,27 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+ <head>
   <meta charset="UTF-8">
-    <meta name="viewport"
-     content="width=device-width initial-scale=1.0">
+  <meta name="viewport"
+  content="width=device-width initial-scale=1.0">
+  
+  <style>
+      body{
+    background-color:blue;
+    font-family:Arial;
+  }
+  
+  .body {
+    margin:200px 5px 200px 5px;
+    background-color:white;
+    height:250px;
+    border: 2px solid #1100ff;
+    box-shadow: -1px 1px 10px whitesmoke;
+    
+    }
+   
+   .game-name {
+     height:25px;
+     background-color: #1100ff;
+     text-align: center;
+     font-weight: bolder;
+     font-size: 20px;
+     padding: 6px ;
+     color: white;
+   }
+   
+   .buttons {
+     display: flex;
+   }
+   
+   .buttons button{
+     padding: 10px;
+     margin: 10px;
+     width: 100px;
+     height: 90px;
+     border-radius: 45px;
+     border: 2px solid blue;
+     color: blue;
+     background-color: white;
+     font-size: 13px;
+     font-weight: bold;
      
-  <title>Page title</title>
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-    <p class="brand-name">Welcome to Bright Nation </p>
-    <img class="home-jpg" src="home.jpg" alt="home.jpg">
+   }
+   
+   .buttons button:hover {
+     background-color: blue;
+     color: white;
+     border: 2px solid white;
+     cursor: pointer;
+   }
+   
+   .maker {
+     bottom: 0;
+     color:white;
+     background-color: blue;
+     font-weight: bolder;
+     text-align:center;
+     letter-spacing: 2px;   
+   }
+   
+   
+   a {
+     text-decoration: none;
+     color:white;
+     padding: 5px;
+     margin-left: 65px;
+     background-color: blue;
+     border-radius: 20px;
+   }
+   
+  </style>
+  
+  <title>ROCK PAPER SCISSORS</title>
+  <link rel="stylesheet" href="game.css">
+ 
+ </head>
+ <body>
+   <div class="body">
+  <p class="game-name">
+    ROCK PAPER SCISSORS GAME
+  </p>
+  
+  <div class="buttons">
     
-    <p>Empowering minds.</p>
-    <p>Shaping the future.</p>
+    <button onclick="
     
-    <button>
-      <a href="website.html"> Get started</a>
-    </button>
+   const computerMove = pickComputerMove();
+    const computerWin = 'Yh I won! 😋💯\n\nNo one dares to beat Bright nation';
+       
+       const computerLoss = 'That was luck i almost got u\n\nYou won the round 😞😞';
+       
+       const computerDraw = 'Shit 😯 So close to failure\n\nIts was a Tie🎀';
+      let result = '';
+      
+        if(computerMove === 'ROCK')
+         {
+        result = computerDraw; 
+        }
+        else if(computerMove === 'PAPER')
+         {
+         result =computerWin;
+        }
+        else if(computerMove === 'SCISSORS')
+        {
+        result = computerLoss;
+        }
+      
+        alert(`${result}\n\nBright played ${computerMove}\nU played ROCK`);
+       
+       
+          
+    ">ROCK</button>
     
-    <p>Who Are We </p>
+    <button onclick="
+   const computerMove = pickComputerMove();
+    const computerWin = 'Yh I won! 😋💯\n\nNo one dares to beat Bright nation';
+       
+       const computerLoss = 'That was luck i almost got u\n\nYou won the round 😞😞';
+       
+       const computerDraw = 'Shit 😯 So close to failure\n\nIts was a Tie🎀';
+      let result = '';
+      
+        if(computerMove === 'ROCK') {
+        result = computerLoss;
+        }else if(computerMove === 'PAPER') {
+         result = computerDraw;
+        }else if(computerMove === 'SCISSORS'){
+        result = computerWin;
+        }
+      
+        alert(`${result}\n\nBright played ${computerMove}\nU played PAPER`);
+       
+       
     
-    <p>Bright Nation is a forward-thinking brand committed to youth empowerment, education,and creativity.We believe in building a brighter future through innovation and purpose.</p>
+    ">PAPER</button>
     
-</body>
+   <button onclick="
+  const computerMove = pickComputerMove();
+  
+  const  computerWin = 'Yh I won! 😋💯\n\nNo one dares to beat Bright nation';
+       
+      const  computerLoss = 'That was luck i almost got u\n\nYou won the round 😞😞';
+       
+      const  computerDraw = 'Shit 😯 So close to failure\n\nIts was a Tie🎀';
+  
+      if(computerMove === 'ROCK') {
+        result =  computerWin;
+        }else if(computerMove === 'PAPER') {
+         result =computerLoss;
+        }else if(computerMove === 'SCISSORS'){
+        result =computerDraw;
+        }
+       
+       alert(`${result}\n\nBright played ${computerMove}\nU played SCISSORS`);
+       
+   
+   ">SCISSORS</button>
+   
+  </div>
+  
+    <p class="maker">
+      BRIGHT NATION 
+    </p>
+    
+    <a href="rules.html">CLICK TO SEE THE RULES</a>
+  </div>
+  
+  <script>
+    function pickComputerMove(){
+      const randomNumber = Math.random();
+       
+      
+      let computerMove ='';
+      
+      if(randomNumber >= 0 && randomNumber < 1/3 ) {
+        computerMove ='ROCK';
+      }
+      
+      else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+        computerMove ='PAPER';
+        }
+      
+      else if (randomNumber >= 2/3 && randomNumber < 1) {
+        computerMove ='SCISSORS';
+      } 
+      
+      
+      return computerMove;
+    }
+    
+    
+    
+  </script>
+ </body>
 </html>
