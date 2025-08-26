@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width , initial-scale = 1.0">
+  <title>ROCK PAPER SCISSORS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <body>
+  <p class="title">
+    ROCK PAPER SCISSORS GAME
+  </p>
+    <div class="emojis">
+    <button onclick="
+       playGame('✊');  
+    " class="emoji">✊</button>
+    
+    <button onclick="
+       playGame('🖐️');
+    " class="emoji">🖐️</button>
+    
+   <button onclick="
+      playGame('✌️');
+   " class="emoji">✌️</button>
+   </div>
+   
+   <div class="grid">
+     
+  <div>
+    <p class="result-label">RESULT:</p>
+  </div>
+  <div>
+   <p class="js-result result">BRIGHT</p>
+  </div>
+  <div>
+   <p class="move-label">MOVES:</p>
+  </div>
+  <div>
+   <p class="js-move move">NATION</p>
+  </div>
+  
+   </div>
+   
+   <p class="js-score score"></p>
+   
+   <div class="reset-button">
+   <button onclick="
+       score.wins = 0;
+       score.ties = 0;
+       score.losses = 0;
+       localStorage.removeItem('score');
+       
+       updateScore();
+  " class="reset">RESET SCORE </button>
+  </div>
+  
+  <footer class="footer">
+      &copy 2025 BRIGHT NATION. All rights reserved.
+    </footer>
+   
+  <script src="game.js"></script>
+    
+</body>
+</html>

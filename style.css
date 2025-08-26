@@ -1,0 +1,163 @@
+ body {
+  background-color: rgb(25,25,25);
+  color: white;
+  font-family: Arial;
+  cursor: pointer;
+}
+
+.title {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 23px;
+  margin-top: 80px;
+}
+ 
+ .emoji {
+   font-size: 45px;
+   padding: 18px;
+   margin: 50px 5px;
+   border: 2px solid white;
+   border-radius: 55px;
+   background-color: rgb(25,25,25);
+   display: inline-block;
+   text-align: center;
+   
+ }
+ 
+ .emoji:hover{
+   border: 2px solid orange;
+ }
+ 
+ .link {
+   border: 1px solid white;
+   background-color: rgb(25,25,25);
+   padding: 10px 20px;
+   font-size: 17px;
+   border-radius: 50px;
+   font-weight: bold;   
+   text-align: center;
+   display: block;
+   text-decoration: none;
+   color: white;
+   margin: 50px 20%;
+   margin-bottom: 0px;
+   
+ }
+ 
+ 
+ .emojis {
+   text-align: center;
+ }
+ 
+/*
+.start-game {
+  justify-content: center;
+  align-content: center;
+}
+*/
+
+ .footer {
+   position: fixed;
+   bottom: 10px;
+   left: 0px;
+   right: 0px;
+   text-align: center;
+   background-color: black;
+   padding: 10px;
+   
+ }
+ 
+ .grid {
+   display: grid;
+   grid-template-columns: auto auto;
+   grid-template-rows: auto auto;
+   text-align: center;
+ }
+ .result {
+   font-size: 15px;
+   font-weight: bold;
+   word-spacing: 5px;
+ }
+ 
+ .result-label{
+   font-size: 15px;
+   font-weight: bolder;
+ }
+ 
+ .move {
+   font-size: 15px;
+   font-weight: bold;
+   word-spacing: 5px;
+ }
+ 
+ .move-label {
+   font-size: 15px;
+   font-weight: bolder;
+ }
+ 
+ .score {
+   text-align: center;
+   font-size: 17px;
+   font-weight: bolder;
+   margin: 20px;
+   word-spacing: 5px;
+   letter-spacing: 2px;
+ }
+ 
+ .reset {
+   font-size: 15px;
+   margin: 20px ;
+   padding: 5px 15px;
+   font-weight: bolder;
+   background-color: white;
+   border: none;
+ }
+ 
+ .reset-button {
+   text-align: center;
+ }
+ 
+ .rules {
+   font-size: 18px;
+   text-align: center;
+ }
+ 
+ 
+ 
+@media screen and (min-width: 480px) {
+  .footer {
+    position: static;
+  }
+  
+  .link {
+    margin: 50px 150px;
+  }
+  
+  .emoji {
+    font-size: 60px;
+    margin: 25px;
+  }
+  
+  .title {
+    font-size: 35px;
+  }
+  
+  .result, .result-label,
+  .move, .move-label {
+    font-size: 17px;
+  }
+  
+  .reset {
+    font-size: 25px;
+  }
+  
+  .score {
+    margin: 20px;
+    font-size: 20px;
+  }
+  
+  .rules {
+    font-size: 25px;
+  }
+}
+
